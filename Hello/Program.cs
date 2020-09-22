@@ -6,6 +6,8 @@ namespace Hello
     {
         static void Main(string[] args)
         {
+
+            valueTypes();
             //string name = args[0];
             //Console.WriteLine("Witaj świecie!");
             //Console.WriteLine("Witaj " + name);
@@ -24,13 +26,30 @@ namespace Hello
 
         }
 
+        private static void valueTypes()
+        {
+            int maxInt = int.MaxValue;
+            int minInt = int.MinValue;
+            long maxLong = long.MaxValue;
+            long minLong = long.MinValue;
+            Console.WriteLine("maxInt = " + maxInt);
+            Console.WriteLine("minInt = " + minInt);
+            Console.WriteLine("maxLong = " + maxLong);
+            Console.WriteLine("minLong = " + minLong);
+        }
+
+        /// <summary>
+        /// clears console and sets text color to default
+        /// </summary>
         private static void settings()
         {
             Console.ReadKey();
             Console.Clear();
             Console.ResetColor();
         }
-
+        /// <summary>
+        /// Outputs the message depending on user age
+        /// </summary>
         private static void age(string name)
         {
             Console.Write("podaj swój wiek : ");
@@ -53,6 +72,9 @@ namespace Hello
             }
         }
 
+        /// <summary>
+        /// Set up name from user input
+        /// </summary>
         private static string greetings()
         {
             Console.Write("Podaj imię : ");
